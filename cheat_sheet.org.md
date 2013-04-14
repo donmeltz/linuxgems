@@ -1,4 +1,6 @@
-cheat_sheet.org.sh
+This is a fork of the linuxgems cheat_sheet.org.sh
+I'm in the process of converting it to a markdown format document, and modifying it for my own personal use.
+
 The contents of this file are released under the GNU General Public License. Feel free to reuse the contents of this work, as long as the resultant works give proper attribution and are made publicly available under the GNU General Public License.
 Best viewed in emacs org-mode.
 Alternately, one can keep this cheat sheet handy by adding the following line to ~/.bashrc:

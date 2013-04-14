@@ -1,139 +1,189 @@
-# cheat_sheet.org.sh
-# The contents of this file are released under the GNU General Public License. Feel free to reuse the contents of this work, as long as the resultant works give proper attribution and are made publicly available under the GNU General Public License.
-# Best viewed in emacs org-mode.
-# Alternately, one can keep this cheat sheet handy by adding the following line to ~/.bashrc:
-#
-# alias cheatsheet="less ~/path_to_cheat_sheet.org.sh" 
+ cheat_sheet.org.sh
+ The contents of this file are released under the GNU General Public License. Feel free to reuse the contents of this work, as long as the resultant works give proper attribution and are made publicly available under the GNU General Public License.
+ Best viewed in emacs org-mode.
+ Alternately, one can keep this cheat sheet handy by adding the following line to ~/.bashrc:
+
+ alias cheatsheet="less ~/path_to_cheat_sheet.org.sh" 
 
 
-* Reference:
-** Basics:
-*** Getting help:
+# Reference: #
 
-# View the manual for target command
-man command
+## Basics: ##
 
-# Get help with a target command (probably the same as above, but not always):
-command -h
+### Getting help: ###
 
-# In case you forget the name of a command, print possible commands relating to any given word:
-apropos word
+View the manual for target command
 
-# View index of help pages:
-info
+	man command
 
-*** Command Line Utilities:
-**** Basic File and Directory Operations:
-# Print current working directory:
-pwd
+Get help with a target command (probably the same as above, but not always):
 
-# Show files in current directory:
-ls
+	command -h
 
-# Show maximum information about all files, including hidden:
-ls -a
+In case you forget the name of a command, print possible commands relating to any given word:
 
-# Recurse into subdirectories and list those as well:
-ls -R
+	apropos word
 
-# List files by modification time, most recent first.
-ls -lt
+View index of help pages:
 
-# Move/rename a file or directory (be careful that you don't move the source over a destination with the same name):
-mv source destination
+	info
 
-# Delete target forever (be very careful), use -r recursive flag for directories:
-rm target
+### Command Line Utilities: ###
 
-# Copy file or directory:
-cp source destination
+#### Basic File and Directory Operations: ####
 
-# Mount filesytem:
-mount /dev/device_name /media/device_name
+Print current working directory:
 
-# Unmount:
-umount /media/device_name
+	pwd
 
-# Forensically clone filesystems and do other low-level operations on files. Be careful with this one. Can be destructive:
-dd
+Show files in current directory:
 
-# Work with disk partitions:
-parted
+	ls
 
-# Filesystem creation tool:
-mkfs
 
-**** System Administration:
+Show maximum information about all files, including hidden:
+	ls -a
 
-# Execute command as an administrator (can be destructive/insecure. Use only for system administration tasks):
-sudo command
+Recurse into subdirectories and list those as well:
 
-# Become system administrator:
-sudo -s
+	ls -R
 
-# Quit system administration:
-exit
+List files by modification time, most recent first.
 
-# Forgot to type sudo in front of a command and already hit enter? Repeat the last command using sudo:
-sudo !!
+	ls -lt
 
-***** Installing software from a .tgz (also known as a tarball):
+Move/rename a file or directory (be careful that you don't move the source over a destination with the same name):
 
-# First, unzip the tarball (see section on tar, below)
-# Next, move into unzipped directory:
-cd software_directory
+	mv source destination
 
-# Always read README first if it is provided, in case there are any modifications to the procedure outlined below:
-cat README
+Delete target forever (be very careful), use -r recursive flag for directories:
 
-# Automatically check for appropriate configurations and generate a MAKE file in the directory:
-./configure
+	rm target
 
-# Compile software. May require sudo:
-make
+Copy file or directory:
 
-# Move files into their appropriate locations. May also require sudo:
-make install
+	cp source destination
 
-# Clean up files in directory, in case make command fails, or just to remove unnecessary cruft:
-make clean
+Mount filesytem:
 
-***** Ubuntu/Debian Software repositories:
+	mount /dev/device_name /media/device_name
 
-# Check distro repositories for software updates:
-sudo apt-get update
+Unmount:
 
-# Download and install updates (update first):
-sudo apt-get upgrade
+	umount /media/device_name
 
-# Search for package in the repositories:
-apt-cache search keyword
+Forensically clone filesystems and do other low-level operations on files. Be careful with this one. Can be destructive:
 
-# Get more detail on one specific package:
-apt-cache show package_name
+	dd
 
-# Download and install a package:
-sudo apt-get install package_name
+Work with disk partitions:
 
-# View the output of a command in a more convenient format:
-command | less
+	parted
 
-**** Working With Files:
+Filesystem creation tool:
 
-# Print a file in terminal:
-cat file
+	mkfs
 
-# Find files matching filename:
-locate filename
+#### System Administration: ####
 
-# See the version of a program or the location of the program
-which appname
+Execute command as an administrator (can be destructive/insecure. Use only for system administration tasks):
 
-# Search through filename for matches to phrase:
-grep phrase filename
+	sudo command
 
-# Search through output of a command for phrase:
-command | grep phrase
+Become system administrator:
+
+	sudo -s
+
+Quit system administration:
+
+	exit
+
+Forgot to type sudo in front of a command and already hit enter? Repeat the last command using sudo:
+
+	sudo !!
+
+#### Installing software from a .tgz (also known as a tarball): ####
+
+First, unzip the tarball (see section on tar, below)
+Next, move into unzipped directory:
+
+	cd software_directory
+
+Always read README first if it is provided, in case there are any modifications to the procedure outlined below:
+
+	cat README
+
+Automatically check for appropriate configurations and generate a MAKE file in the directory:
+
+	./configure
+
+Compile software. May require sudo:
+
+	make
+
+Move files into their appropriate locations. May also require sudo:
+
+	make install
+
+Clean up files in directory, in case make command fails, or just to remove unnecessary cruft:
+
+	make clean
+
+#### Ubuntu/Debian Software repositories: ####
+
+Check distro repositories for software updates:
+
+	sudo apt-get update
+
+Download and install updates (update first):
+
+	sudo apt-get upgrade
+
+Search for package in the repositories:
+
+	apt-cache search keyword
+
+Get more detail on one specific package:
+
+	apt-cache show package_name
+
+Download and install a package:
+
+	sudo apt-get install package_name
+
+View the output of a command in a more convenient format:
+
+	command | less
+
+#### Working With Files: ####
+
+Print a file in terminal:
+
+	cat file
+
+Find files matching filename:
+
+	locate filename
+
+See the version of a program or the location of the program
+
+	which appname
+
+Search through filename for matches to phrase:
+
+	grep phrase filename
+
+Search through output of a command for phrase:
+
+	command | grep phrase
+
+
+
+
+
+
+
+
 
 **** Working With Processes:
 

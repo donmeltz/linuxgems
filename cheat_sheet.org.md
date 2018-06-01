@@ -24,7 +24,7 @@ Get help with a target command (probably the same as above, but not always):
 
 In case you forget the name of a command, print possible commands relating to any given word:
 
-	apropos word
+    apropos word
 
 View index of help pages:
 
